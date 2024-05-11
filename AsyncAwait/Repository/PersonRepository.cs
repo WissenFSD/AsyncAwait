@@ -17,10 +17,13 @@ namespace AsyncAwait.Repository
 		}
 		public async Task<List<Person>> GetAsyncPerson()
 		{
+
+			// Task söz konusu asenkron işlemi takip eden bir yapıdadır. Task üzerinden asenkron işlemin durumu takip edilebilir.
 			var peoples = await _context.People.ToListAsync();
 
 			return peoples;
 		}
+		// 
 		
 		
 	}
